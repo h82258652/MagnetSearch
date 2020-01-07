@@ -1,0 +1,38 @@
+﻿<Application x:Class="MagnetSearch.Uwp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="using:Microsoft.Toolkit.Uwp.UI.Converters"
+             xmlns:localConverters="using:MagnetSearch.Uwp.Converters"
+             xmlns:viewModels="using:MagnetSearch.Uwp.ViewModels">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/AppButtonStyles.xaml" />
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+            <converters:StringFormatConverter x:Key="StringFormatConverter" />
+            <converters:FileSizeToFriendlyStringConverter x:Key="FileSizeToFriendlyStringConverter" />
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+            <converters:EmptyCollectionToObjectConverter x:Key="EmptyCollectionToVisibilityConverter">
+                <converters:EmptyCollectionToObjectConverter.EmptyValue>
+                    <Visibility>Visible</Visibility>
+                </converters:EmptyCollectionToObjectConverter.EmptyValue>
+                <converters:EmptyCollectionToObjectConverter.NotEmptyValue>
+                    <Visibility>Collapsed</Visibility>
+                </converters:EmptyCollectionToObjectConverter.NotEmptyValue>
+            </converters:EmptyCollectionToObjectConverter>
+            <converters:EmptyCollectionToObjectConverter x:Key="ReversedEmptyCollectionToVisibilityConverter">
+                <converters:EmptyCollectionToObjectConverter.EmptyValue>
+                    <Visibility>Collapsed</Visibility>
+                </converters:EmptyCollectionToObjectConverter.EmptyValue>
+                <converters:EmptyCollectionToObjectConverter.NotEmptyValue>
+                    <Visibility>Visible</Visibility>
+                </converters:EmptyCollectionToObjectConverter.NotEmptyValue>
+            </converters:EmptyCollectionToObjectConverter>
+            <localConverters:IsNullToVisibilityConverter x:Key="ReversedIsNullToVisibilityConverter"
+                                                         IsReversed="True" />
+            <localConverters:TimeSpanToFriendlyStringConverter x:Key="TimeSpanToFriendlyStringConverter" />
+            <viewModels:ViewModelLocator x:Key="Locator" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
