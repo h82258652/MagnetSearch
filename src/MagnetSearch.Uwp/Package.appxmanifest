@@ -8,15 +8,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="1aa2520a-b9e3-47a2-b096-e2693b443cbe"
-    Publisher="CN=h8225"
+    Name="18174h82258652.Yoyoyo"
+    Publisher="CN=D8CBB42C-5DD4-4A02-8424-31AF9627DADA"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="1aa2520a-b9e3-47a2-b096-e2693b443cbe" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="83acd03a-dd44-4622-900d-71d64d5732c5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>MagnetSearch.Uwp</DisplayName>
-    <PublisherDisplayName>h8225</PublisherDisplayName>
+    <DisplayName>Yoyoyo~</DisplayName>
+    <PublisherDisplayName>h82258652</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
