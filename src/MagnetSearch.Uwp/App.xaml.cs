@@ -23,7 +23,7 @@ namespace MagnetSearch.Uwp
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            SetUpExceptionless();
+            //SetUpExceptionless();
         }
 
         /// <summary>
