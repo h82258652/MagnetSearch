@@ -93,7 +93,7 @@ namespace MagnetSearch.Uwp
 
         private void SetUpExceptionless()
         {
-#if DEBUG
+#if !DEBUG
             var client = ExceptionlessClient.Default;
             client.Configuration.ServerUrl = "http://120.238.131.27:8087";
             client.Configuration.ApiKey = "rV7o6UWV6yYS1AKSOg6lqMFBF3K6n203fT1We4BX";
