@@ -11,7 +11,7 @@
 var msBuildPath = GetFiles(VSWhereLatest() + "/**/MSBuild.exe").FirstOrDefault();
 
 var target = Argument("target", "Default");
-var configuration = Argument("configuration", "Debug");
+var configuration = Argument("configuration", "Release");
 var verbosity = Argument("verbosity", Verbosity.Minimal);
 
 //////////////////////////////////////////////////////////////////////
@@ -54,7 +54,8 @@ Task("Build")
         .SetPlatformTarget(PlatformTarget.x86)
         .SetVerbosity(verbosity)
         .WithProperty("AppxBundle", "Always")
-        .WithProperty("AppxBundlePlatforms", "x86|x64|arm");
+        .WithProperty("AppxBundlePlatforms", "x86|x64|arm")
+        .WithProperty("UseDotNetNativeToolchain", "false");
         MSBuild(solution, settings);
     }
     else
