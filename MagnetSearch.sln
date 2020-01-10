@@ -16,6 +16,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{361A1D66-6F8B-496C-B7D8-3904E58AECA6}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		build.cake = build.cake
+		build.ps1 = build.ps1
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnetSearch.Services.Abstractions", "src\MagnetSearch.Services.Abstractions\MagnetSearch.Services.Abstractions.csproj", "{1230F94A-3B37-4EB8-9DF4-E6CCE1052F2A}"
